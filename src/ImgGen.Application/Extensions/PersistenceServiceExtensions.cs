@@ -84,7 +84,7 @@ public static class PersistenceServiceExtensions
         });
 
         // Register the image storage service and validators
-        services.AddScoped<ImgGen.Application.Services.ImageStorageService>();
+        services.AddScoped<Services.ImageStorageService>();
         services.AddScoped<IValidator<ImageMetaData>, ImageMetaDataValidator>();
     }
 }

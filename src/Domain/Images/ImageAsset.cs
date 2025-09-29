@@ -9,9 +9,9 @@ namespace Domain.Images;
 
 public class ImageAsset
 {
-    public Guid Id { get; set; }
-    public string? FilePath { get; set; }
-    public string? Name { get; set; }
+    public Guid Id { get; set; } = Guid.NewGuid();
+    public Guid ImageDataId { get; set; }
+    public string? Name { get; set; } = Guid.NewGuid().ToString();
     public string? Description { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 }
@@ -20,8 +20,6 @@ public class ImageAssetValidator : AbstractValidator<ImageAsset>
 {
     public ImageAssetValidator()
     {
-        RuleFor(it => it.FilePath)
-            .NotEmpty().WithMessage("File path is required.");
         RuleFor(it => it.Name)
             .NotEmpty().WithMessage("Name is required.");
     }
