@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ImgGen.Mud")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+380889e0034cb9c90d19a57c39fcc8d49ccab1fe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9076ea957ded64e0fa0a0ed4d51ad672ed7c96f1")]
 [assembly: System.Reflection.AssemblyProductAttribute("ImgGen.Mud")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ImgGen.Mud")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
