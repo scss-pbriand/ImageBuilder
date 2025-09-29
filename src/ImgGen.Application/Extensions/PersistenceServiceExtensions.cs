@@ -3,11 +3,13 @@ using Microsoft.AspNetCore.DataProtection.Repositories; // Add this for IXmlRepo
 using Domain.Images; // Import the domain models
 using ImgGen.Application.Infrastructure;
 using ImgGen.Application.Infrastructure.DataProtection;
+using FluentValidation;
 using JasperFx;
 using Marten;
 using Marten.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
 using Weasel.Core;
 
 namespace ImgGen.Application.Extensions;
@@ -51,5 +53,38 @@ public static class PersistenceServiceExtensions
                 builder.EnableParameterLogging(configuration.GetValue("Marten:ParameterLogging", false));
             }
         );
+    }
+
+    /// <summary>
+    /// Adds EF Core image storage services with PostgreSQL
+    /// </summary>
+    public static void AddImageStorage(this IServiceCollection services, IConfiguration configuration)
+    {
+        services.AddDbContext<ImageDbContext>(options =>
+        {
+            options.UseNpgsql(
+                configuration.GetConnectionString("DefaultConnection") 
+                ?? throw new Exception("Missing 'database' connection string"),
+                npgsqlOptions =>
+                {
+                    npgsqlOptions.MigrationsHistoryTable("__EFMigrationsHistory", "images");
+                    npgsqlOptions.EnableRetryOnFailure(maxRetryCount: 3, maxRetryDelay: TimeSpan.FromSeconds(30), errorCodesToAdd: null);
+                }
+            );
+
+            // Configure lazy loading for binary data
+            options.UseLazyLoadingProxies();
+            
+            // Enable detailed errors in development
+            if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development")
+            {
+                options.EnableDetailedErrors();
+                options.EnableSensitiveDataLogging();
+            }
+        });
+
+        // Register the image storage service and validators
+        services.AddScoped<ImgGen.Application.Services.ImageStorageService>();
+        services.AddScoped<IValidator<ImageMetaData>, ImageMetaDataValidator>();
     }
 }

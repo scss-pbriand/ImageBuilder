@@ -1,23 +1,36 @@
-C:\Users\pbriand\source\repos\Julie's Image Generator2\src\Domain\bin\Debug\net9.0\Domain.deps.json
-C:\Users\pbriand\source\repos\Julie's Image Generator2\src\Domain\bin\Debug\net9.0\Domain.dll
-C:\Users\pbriand\source\repos\Julie's Image Generator2\src\Domain\bin\Debug\net9.0\Domain.pdb
-C:\Users\pbriand\source\repos\Julie's Image Generator2\src\Domain\obj\Debug\net9.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\pbriand\source\repos\Julie's Image Generator2\src\Domain\obj\Debug\net9.0\Domain.AssemblyInfoInputs.cache
-C:\Users\pbriand\source\repos\Julie's Image Generator2\src\Domain\obj\Debug\net9.0\Domain.AssemblyInfo.cs
-C:\Users\pbriand\source\repos\Julie's Image Generator2\src\Domain\obj\Debug\net9.0\Domain.csproj.CoreCompileInputs.cache
-C:\Users\pbriand\source\repos\Julie's Image Generator2\src\Domain\obj\Debug\net9.0\Domain.dll
-C:\Users\pbriand\source\repos\Julie's Image Generator2\src\Domain\obj\Debug\net9.0\refint\Domain.dll
-C:\Users\pbriand\source\repos\Julie's Image Generator2\src\Domain\obj\Debug\net9.0\Domain.pdb
-C:\Users\pbriand\source\repos\Julie's Image Generator2\src\Domain\obj\Debug\net9.0\ref\Domain.dll
-C:\Users\pbriand\source\repos\ImgGen\src\Domain\bin\Debug\net9.0\Domain.deps.json
-C:\Users\pbriand\source\repos\ImgGen\src\Domain\bin\Debug\net9.0\Domain.dll
-C:\Users\pbriand\source\repos\ImgGen\src\Domain\bin\Debug\net9.0\Domain.pdb
-C:\Users\pbriand\source\repos\ImgGen\src\Domain\obj\Debug\net9.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\pbriand\source\repos\ImgGen\src\Domain\obj\Debug\net9.0\Domain.AssemblyInfoInputs.cache
-C:\Users\pbriand\source\repos\ImgGen\src\Domain\obj\Debug\net9.0\Domain.AssemblyInfo.cs
-C:\Users\pbriand\source\repos\ImgGen\src\Domain\obj\Debug\net9.0\Domain.csproj.CoreCompileInputs.cache
-C:\Users\pbriand\source\repos\ImgGen\src\Domain\obj\Debug\net9.0\Domain.dll
-C:\Users\pbriand\source\repos\ImgGen\src\Domain\obj\Debug\net9.0\refint\Domain.dll
-C:\Users\pbriand\source\repos\ImgGen\src\Domain\obj\Debug\net9.0\Domain.pdb
-C:\Users\pbriand\source\repos\ImgGen\src\Domain\obj\Debug\net9.0\ref\Domain.dll
-C:\Users\pbriand\source\repos\ImgGen\src\Domain\obj\Debug\net9.0\Domain.csproj.AssemblyReference.cache
+C:/Users/pbriand/source/repos/Julie's Image Generator2/src/Domain/bin/Debug/net9.0/Domain.deps.json
+C:/Users/pbriand/source/repos/Julie's Image Generator2/src/Domain/bin/Debug/net9.0/Domain.dll
+C:/Users/pbriand/source/repos/Julie's Image Generator2/src/Domain/bin/Debug/net9.0/Domain.pdb
+C:/Users/pbriand/source/repos/Julie's Image Generator2/src/Domain/obj/Debug/net9.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/pbriand/source/repos/Julie's Image Generator2/src/Domain/obj/Debug/net9.0/Domain.AssemblyInfoInputs.cache
+C:/Users/pbriand/source/repos/Julie's Image Generator2/src/Domain/obj/Debug/net9.0/Domain.AssemblyInfo.cs
+C:/Users/pbriand/source/repos/Julie's Image Generator2/src/Domain/obj/Debug/net9.0/Domain.csproj.CoreCompileInputs.cache
+C:/Users/pbriand/source/repos/Julie's Image Generator2/src/Domain/obj/Debug/net9.0/Domain.dll
+C:/Users/pbriand/source/repos/Julie's Image Generator2/src/Domain/obj/Debug/net9.0/refint/Domain.dll
+C:/Users/pbriand/source/repos/Julie's Image Generator2/src/Domain/obj/Debug/net9.0/Domain.pdb
+C:/Users/pbriand/source/repos/Julie's Image Generator2/src/Domain/obj/Debug/net9.0/ref/Domain.dll
+C:/Users/pbriand/source/repos/ImgGen/src/Domain/bin/Debug/net9.0/Domain.deps.json
+C:/Users/pbriand/source/repos/ImgGen/src/Domain/bin/Debug/net9.0/Domain.dll
+C:/Users/pbriand/source/repos/ImgGen/src/Domain/bin/Debug/net9.0/Domain.pdb
+C:/Users/pbriand/source/repos/ImgGen/src/Domain/obj/Debug/net9.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/pbriand/source/repos/ImgGen/src/Domain/obj/Debug/net9.0/Domain.AssemblyInfoInputs.cache
+C:/Users/pbriand/source/repos/ImgGen/src/Domain/obj/Debug/net9.0/Domain.AssemblyInfo.cs
+C:/Users/pbriand/source/repos/ImgGen/src/Domain/obj/Debug/net9.0/Domain.csproj.CoreCompileInputs.cache
+C:/Users/pbriand/source/repos/ImgGen/src/Domain/obj/Debug/net9.0/Domain.dll
+C:/Users/pbriand/source/repos/ImgGen/src/Domain/obj/Debug/net9.0/refint/Domain.dll
+C:/Users/pbriand/source/repos/ImgGen/src/Domain/obj/Debug/net9.0/Domain.pdb
+C:/Users/pbriand/source/repos/ImgGen/src/Domain/obj/Debug/net9.0/ref/Domain.dll
+C:/Users/pbriand/source/repos/ImgGen/src/Domain/obj/Debug/net9.0/Domain.csproj.AssemblyReference.cache
+/home/runner/work/ImageBuilder/ImageBuilder/src/Domain/bin/Debug/net9.0/Domain.deps.json
+/home/runner/work/ImageBuilder/ImageBuilder/src/Domain/bin/Debug/net9.0/Domain.dll
+/home/runner/work/ImageBuilder/ImageBuilder/src/Domain/bin/Debug/net9.0/Domain.pdb
+/home/runner/work/ImageBuilder/ImageBuilder/src/Domain/obj/Debug/net9.0/Domain.csproj.AssemblyReference.cache
+/home/runner/work/ImageBuilder/ImageBuilder/src/Domain/obj/Debug/net9.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/runner/work/ImageBuilder/ImageBuilder/src/Domain/obj/Debug/net9.0/Domain.AssemblyInfoInputs.cache
+/home/runner/work/ImageBuilder/ImageBuilder/src/Domain/obj/Debug/net9.0/Domain.AssemblyInfo.cs
+/home/runner/work/ImageBuilder/ImageBuilder/src/Domain/obj/Debug/net9.0/Domain.csproj.CoreCompileInputs.cache
+/home/runner/work/ImageBuilder/ImageBuilder/src/Domain/obj/Debug/net9.0/Domain.sourcelink.json
+/home/runner/work/ImageBuilder/ImageBuilder/src/Domain/obj/Debug/net9.0/Domain.dll
+/home/runner/work/ImageBuilder/ImageBuilder/src/Domain/obj/Debug/net9.0/refint/Domain.dll
+/home/runner/work/ImageBuilder/ImageBuilder/src/Domain/obj/Debug/net9.0/Domain.pdb
+/home/runner/work/ImageBuilder/ImageBuilder/src/Domain/obj/Debug/net9.0/ref/Domain.dll
