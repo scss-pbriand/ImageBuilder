@@ -16,11 +16,7 @@
     <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
   </ItemGroup>
 
-  <!-- Add folders for better organization -->
-  <ItemGroup>
-    <Compile Include="Integrations\Images\**\*.cs" />
-    <Compile Include="UnitTests\Images\**\*.cs" />
-  </ItemGroup>
+  <!-- Files are included automatically by the SDK -->
   <ItemGroup>
     <ProjectReference Include="..\src\ImgGen.Application\ImgGen.Application.csproj" />
   </ItemGroup>
