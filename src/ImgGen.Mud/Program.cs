@@ -52,6 +52,7 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 //builder.Services.AddRelationalStore(builder.Configuration);
 builder.Services.AddDocumentStore(builder.Configuration);
+builder.Services.AddImageStorage(builder.Configuration);
 
 builder.Services.AddIdentityServices();
 

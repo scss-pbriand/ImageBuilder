@@ -1353,3 +1353,5 @@ C:/Users/pbriand/source/repos/ImgGen/src/ImgGen.Mud/bin/Debug/net9.0/Microsoft.A
 /home/runner/work/ImageBuilder/ImageBuilder/src/ImgGen.Mud/obj/Debug/net9.0/ImgGen.Mud.pdb
 /home/runner/work/ImageBuilder/ImageBuilder/src/ImgGen.Mud/obj/Debug/net9.0/ImgGen.Mud.genruntimeconfig.cache
 /home/runner/work/ImageBuilder/ImageBuilder/src/ImgGen.Mud/obj/Debug/net9.0/ref/ImgGen.Mud.dll
+/home/runner/work/ImageBuilder/ImageBuilder/src/ImgGen.Mud/bin/Debug/net9.0/Castle.Core.dll
+/home/runner/work/ImageBuilder/ImageBuilder/src/ImgGen.Mud/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Proxies.dll

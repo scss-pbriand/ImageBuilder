@@ -29,3 +29,5 @@ C:/Users/pbriand/source/repos/ImgGen/src/ImgGen.Application/obj/Debug/net9.0/Img
 /home/runner/work/ImageBuilder/ImageBuilder/src/ImgGen.Application/obj/Debug/net9.0/refint/ImgGen.Application.dll
 /home/runner/work/ImageBuilder/ImageBuilder/src/ImgGen.Application/obj/Debug/net9.0/ImgGen.Application.pdb
 /home/runner/work/ImageBuilder/ImageBuilder/src/ImgGen.Application/obj/Debug/net9.0/ref/ImgGen.Application.dll
+/home/runner/work/ImageBuilder/ImageBuilder/src/ImgGen.Application/bin/Debug/net9.0/ImgGen.Application.runtimeconfig.json
+/home/runner/work/ImageBuilder/ImageBuilder/src/ImgGen.Application/obj/Debug/net9.0/ImgGen.Application.genruntimeconfig.cache

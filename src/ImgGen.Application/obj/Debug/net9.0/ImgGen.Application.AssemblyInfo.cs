@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ImgGen.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c24cd0fb628911b78eba997558c4f1a2e1fd2d77")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+380889e0034cb9c90d19a57c39fcc8d49ccab1fe")]
 [assembly: System.Reflection.AssemblyProductAttribute("ImgGen.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ImgGen.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

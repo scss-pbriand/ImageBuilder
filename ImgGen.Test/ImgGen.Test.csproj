@@ -10,6 +10,7 @@
   <ItemGroup>
     <PackageReference Include="MSTest" Version="4.0.0-preview.25415.9" />
     <PackageReference Include="Shouldly" Version="4.3.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.*" />
   </ItemGroup>
 
   <ItemGroup>

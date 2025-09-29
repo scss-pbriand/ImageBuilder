@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "aW9JqZMCGes=",
+  "dgSpecHash": "rRdFxJHtdbo=",
   "success": true,
   "projectFilePath": "/home/runner/work/ImageBuilder/ImageBuilder/src/ImgGen.Mud/ImgGen.Mud.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "/home/runner/.nuget/packages/blazorjs/2.2.0/blazorjs.2.2.0.nupkg.sha512",
     "/home/runner/.nuget/packages/blazorparametercastingmagic/1.2.23060811/blazorparametercastingmagic.1.2.23060811.nupkg.sha512",
     "/home/runner/.nuget/packages/buildbundlerminifier/3.2.449/buildbundlerminifier.3.2.449.nupkg.sha512",
+    "/home/runner/.nuget/packages/castle.core/5.1.1/castle.core.5.1.1.nupkg.sha512",
     "/home/runner/.nuget/packages/codebeam.mudblazor.extensions/8.2.4/codebeam.mudblazor.extensions.8.2.4.nupkg.sha512",
     "/home/runner/.nuget/packages/csvhelper/33.0.1/csvhelper.33.0.1.nupkg.sha512",
     "/home/runner/.nuget/packages/exceldatareader/3.7.0/exceldatareader.3.7.0.nupkg.sha512",
@@ -88,6 +89,7 @@
     "/home/runner/.nuget/packages/microsoft.entityframeworkcore.abstractions/9.0.9/microsoft.entityframeworkcore.abstractions.9.0.9.nupkg.sha512",
     "/home/runner/.nuget/packages/microsoft.entityframeworkcore.analyzers/9.0.9/microsoft.entityframeworkcore.analyzers.9.0.9.nupkg.sha512",
     "/home/runner/.nuget/packages/microsoft.entityframeworkcore.design/9.0.9/microsoft.entityframeworkcore.design.9.0.9.nupkg.sha512",
+    "/home/runner/.nuget/packages/microsoft.entityframeworkcore.proxies/9.0.9/microsoft.entityframeworkcore.proxies.9.0.9.nupkg.sha512",
     "/home/runner/.nuget/packages/microsoft.entityframeworkcore.relational/9.0.9/microsoft.entityframeworkcore.relational.9.0.9.nupkg.sha512",
     "/home/runner/.nuget/packages/microsoft.entityframeworkcore.sqlserver/9.0.9/microsoft.entityframeworkcore.sqlserver.9.0.9.nupkg.sha512",
     "/home/runner/.nuget/packages/microsoft.entityframeworkcore.tools/9.0.9/microsoft.entityframeworkcore.tools.9.0.9.nupkg.sha512",
