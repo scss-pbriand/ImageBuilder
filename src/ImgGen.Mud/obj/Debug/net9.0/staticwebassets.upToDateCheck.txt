@@ -1,2 +1,0 @@
-C:\Users\pbriand\source\repos\ImgGen\src\ImgGen.Mud\wwwroot\favicon.ico
-wwwroot\favicon.ico
