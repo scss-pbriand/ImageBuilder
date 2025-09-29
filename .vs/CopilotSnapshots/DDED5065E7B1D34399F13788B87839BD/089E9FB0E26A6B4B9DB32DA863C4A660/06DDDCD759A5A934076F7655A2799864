@@ -1,0 +1,66 @@
+﻿@page "/image-type-manager"
+
+<PageTitle>Image Type Manager</PageTitle>
+
+<div class="container mt-4">
+    <h1>Manage Image Types</h1>
+    <DataGrid TItem="ImageType" Data="imageTypes" AutoGenerateColumns="false">
+        <DataGridColumns>
+            <DataGridColumn Field="@nameof(ImageType.Name)" Caption="Name" />
+            <DataGridCommandColumn>
+                <CommandButton Text="Edit" Clicked="EditImageType" />
+                <CommandButton Text="Delete" Clicked="DeleteImageType" />
+            </DataGridCommandColumn>
+        </DataGridColumns>
+    </DataGrid>
+
+    <Button Color="Color.Primary" Clicked="AddImageType">Add New Image Type</Button>
+
+    <Modal IsVisible="isModalVisible" OnClosed="CloseModal">
+        <ModalHeader>Add/Edit Image Type</ModalHeader>
+        <ModalBody>
+            <TextEdit @bind-Value="currentImageType.Name" Placeholder="Enter Image Type Name" />
+        </ModalBody>
+        <ModalFooter>
+            <Button Color="Color.Primary" Clicked="SaveImageType">Save</Button>
+            <Button Color="Color.Secondary" Clicked="CloseModal">Cancel</Button>
+        </ModalFooter>
+    </Modal>
+</div>
+
+@code {
+    private List<ImageType> imageTypes = new();
+    private ImageType currentImageType = new();
+    private bool isModalVisible;
+
+    private void AddImageType()
+    {
+        currentImageType = new ImageType();
+        isModalVisible = true;
+    }
+
+    private void EditImageType(ImageType imageType)
+    {
+        currentImageType = imageType;
+        isModalVisible = true;
+    }
+
+    private void DeleteImageType(ImageType imageType)
+    {
+        imageTypes.Remove(imageType);
+    }
+
+    private void SaveImageType()
+    {
+        if (!imageTypes.Contains(currentImageType))
+        {
+            imageTypes.Add(currentImageType);
+        }
+        isModalVisible = false;
+    }
+
+    private void CloseModal()
+    {
+        isModalVisible = false;
+    }
+}

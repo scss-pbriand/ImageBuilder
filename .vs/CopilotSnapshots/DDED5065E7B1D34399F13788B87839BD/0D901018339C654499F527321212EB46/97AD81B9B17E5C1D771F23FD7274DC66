@@ -1,0 +1,3 @@
+﻿@page "/image-asset-uploader"
+
+<ImageAssetUploader />

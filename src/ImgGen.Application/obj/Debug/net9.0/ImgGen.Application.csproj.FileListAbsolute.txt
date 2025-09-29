@@ -1,0 +1,15 @@
+C:\Users\pbriand\source\repos\ImgGen\src\ImgGen.Application\bin\Debug\net9.0\ImgGen.Application.deps.json
+C:\Users\pbriand\source\repos\ImgGen\src\ImgGen.Application\bin\Debug\net9.0\ImgGen.Application.dll
+C:\Users\pbriand\source\repos\ImgGen\src\ImgGen.Application\bin\Debug\net9.0\ImgGen.Application.pdb
+C:\Users\pbriand\source\repos\ImgGen\src\ImgGen.Application\obj\Debug\net9.0\ImgGen.Application.csproj.AssemblyReference.cache
+C:\Users\pbriand\source\repos\ImgGen\src\ImgGen.Application\obj\Debug\net9.0\ImgGen.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pbriand\source\repos\ImgGen\src\ImgGen.Application\obj\Debug\net9.0\ImgGen.Application.AssemblyInfoInputs.cache
+C:\Users\pbriand\source\repos\ImgGen\src\ImgGen.Application\obj\Debug\net9.0\ImgGen.Application.AssemblyInfo.cs
+C:\Users\pbriand\source\repos\ImgGen\src\ImgGen.Application\obj\Debug\net9.0\ImgGen.Application.csproj.CoreCompileInputs.cache
+C:\Users\pbriand\source\repos\ImgGen\src\ImgGen.Application\obj\Debug\net9.0\ImgGen.Application.dll
+C:\Users\pbriand\source\repos\ImgGen\src\ImgGen.Application\obj\Debug\net9.0\refint\ImgGen.Application.dll
+C:\Users\pbriand\source\repos\ImgGen\src\ImgGen.Application\obj\Debug\net9.0\ImgGen.Application.pdb
+C:\Users\pbriand\source\repos\ImgGen\src\ImgGen.Application\obj\Debug\net9.0\ref\ImgGen.Application.dll
+C:\Users\pbriand\source\repos\ImgGen\src\ImgGen.Application\bin\Debug\net9.0\Domain.dll
+C:\Users\pbriand\source\repos\ImgGen\src\ImgGen.Application\bin\Debug\net9.0\Domain.pdb
+C:\Users\pbriand\source\repos\ImgGen\src\ImgGen.Application\obj\Debug\net9.0\ImgGen.A.7083476A.Up2Date

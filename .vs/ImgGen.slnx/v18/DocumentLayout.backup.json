@@ -1,0 +1,398 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F3CFA2C3-C7B9-4A7A-B91D-7A53AFDF6C02}|src\\ImgGen.Mud\\ImgGen.Mud.csproj|c:\\users\\pbriand\\source\\repos\\imggen\\src\\imggen.mud\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F3CFA2C3-C7B9-4A7A-B91D-7A53AFDF6C02}|src\\ImgGen.Mud\\ImgGen.Mud.csproj|solutionrelative:src\\imggen.mud\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3CFA2C3-C7B9-4A7A-B91D-7A53AFDF6C02}|src\\ImgGen.Mud\\ImgGen.Mud.csproj|c:\\users\\pbriand\\source\\repos\\imggen\\src\\imggen.mud\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F3CFA2C3-C7B9-4A7A-B91D-7A53AFDF6C02}|src\\ImgGen.Mud\\ImgGen.Mud.csproj|solutionrelative:src\\imggen.mud\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD80414D-59D3-49CE-AD07-0025589585C3}|src\\ImgGen.Application\\ImgGen.Application.csproj|c:\\users\\pbriand\\source\\repos\\imggen\\src\\imggen.application\\extensions\\identityservicesextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD80414D-59D3-49CE-AD07-0025589585C3}|src\\ImgGen.Application\\ImgGen.Application.csproj|solutionrelative:src\\imggen.application\\extensions\\identityservicesextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3CFA2C3-C7B9-4A7A-B91D-7A53AFDF6C02}|src\\ImgGen.Mud\\ImgGen.Mud.csproj|c:\\users\\pbriand\\source\\repos\\imggen\\src\\imggen.mud\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3CFA2C3-C7B9-4A7A-B91D-7A53AFDF6C02}|src\\ImgGen.Mud\\ImgGen.Mud.csproj|solutionrelative:src\\imggen.mud\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD80414D-59D3-49CE-AD07-0025589585C3}|src\\ImgGen.Application\\ImgGen.Application.csproj|c:\\users\\pbriand\\source\\repos\\imggen\\src\\imggen.application\\infrastructure\\documentregistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD80414D-59D3-49CE-AD07-0025589585C3}|src\\ImgGen.Application\\ImgGen.Application.csproj|solutionrelative:src\\imggen.application\\infrastructure\\documentregistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|c:\\users\\pbriand\\source\\repos\\imggen\\src\\domain\\identity\\models\\martenidentityuserloginextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|solutionrelative:src\\domain\\identity\\models\\martenidentityuserloginextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|c:\\users\\pbriand\\source\\repos\\imggen\\src\\domain\\identity\\models\\martenidentityclaimextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|solutionrelative:src\\domain\\identity\\models\\martenidentityclaimextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|c:\\users\\pbriand\\source\\repos\\imggen\\src\\domain\\identity\\models\\claim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|solutionrelative:src\\domain\\identity\\models\\claim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD80414D-59D3-49CE-AD07-0025589585C3}|src\\ImgGen.Application\\ImgGen.Application.csproj|c:\\users\\pbriand\\source\\repos\\imggen\\src\\imggen.application\\extensions\\persistenceserviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD80414D-59D3-49CE-AD07-0025589585C3}|src\\ImgGen.Application\\ImgGen.Application.csproj|solutionrelative:src\\imggen.application\\extensions\\persistenceserviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD80414D-59D3-49CE-AD07-0025589585C3}|src\\ImgGen.Application\\ImgGen.Application.csproj|c:\\users\\pbriand\\source\\repos\\imggen\\src\\imggen.application\\repository\\imagetyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD80414D-59D3-49CE-AD07-0025589585C3}|src\\ImgGen.Application\\ImgGen.Application.csproj|solutionrelative:src\\imggen.application\\repository\\imagetyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD80414D-59D3-49CE-AD07-0025589585C3}|src\\ImgGen.Application\\ImgGen.Application.csproj|c:\\users\\pbriand\\source\\repos\\imggen\\src\\imggen.application\\infrastructure\\imggenstoreoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD80414D-59D3-49CE-AD07-0025589585C3}|src\\ImgGen.Application\\ImgGen.Application.csproj|solutionrelative:src\\imggen.application\\infrastructure\\imggenstoreoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|c:\\users\\pbriand\\source\\repos\\imggen\\src\\domain\\images\\imagetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|solutionrelative:src\\domain\\images\\imagetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|c:\\users\\pbriand\\source\\repos\\imggen\\src\\domain\\images\\imageasset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|solutionrelative:src\\domain\\images\\imageasset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|c:\\users\\pbriand\\source\\repos\\imggen\\src\\domain\\images\\imagecategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|solutionrelative:src\\domain\\images\\imagecategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD80414D-59D3-49CE-AD07-0025589585C3}|src\\ImgGen.Application\\ImgGen.Application.csproj|c:\\users\\pbriand\\source\\repos\\imggen\\src\\imggen.application\\imggen.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{BD80414D-59D3-49CE-AD07-0025589585C3}|src\\ImgGen.Application\\ImgGen.Application.csproj|solutionrelative:src\\imggen.application\\imggen.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|c:\\users\\pbriand\\source\\repos\\imggen\\src\\domain\\images\\imagepart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|solutionrelative:src\\domain\\images\\imagepart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD80414D-59D3-49CE-AD07-0025589585C3}|src\\ImgGen.Application\\ImgGen.Application.csproj|c:\\users\\pbriand\\source\\repos\\imggen\\src\\imggen.application\\infrastructure\\applicationjsonserializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD80414D-59D3-49CE-AD07-0025589585C3}|src\\ImgGen.Application\\ImgGen.Application.csproj|solutionrelative:src\\imggen.application\\infrastructure\\applicationjsonserializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|c:\\users\\pbriand\\source\\repos\\imggen\\src\\domain\\common\\jsonextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87EDA1D2-4B5B-E524-38CE-D0BFCA5F4D6B}|src\\Domain\\Domain.csproj|solutionrelative:src\\domain\\common\\jsonextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BEDAB34-52F0-485C-B4A9-40A60BF088AF}|ImgGen.Test\\ImgGen.Test.csproj|c:\\users\\pbriand\\source\\repos\\imggen\\imggen.test\\imggen.test.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{2BEDAB34-52F0-485C-B4A9-40A60BF088AF}|ImgGen.Test\\ImgGen.Test.csproj|solutionrelative:imggen.test\\imggen.test.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 19,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\ImgGen.Mud\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "src\\ImgGen.Mud\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\ImgGen.Mud\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "src\\ImgGen.Mud\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-28T00:51:26.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\ImgGen.Mud\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "src\\ImgGen.Mud\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\ImgGen.Mud\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "src\\ImgGen.Mud\\Components\\Pages\\Home.razor",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAB4AAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-28T00:49:22.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IdentityServicesExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\ImgGen.Application\\Extensions\\IdentityServicesExtensions.cs",
+              "RelativeDocumentMoniker": "src\\ImgGen.Application\\Extensions\\IdentityServicesExtensions.cs",
+              "ToolTip": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\ImgGen.Application\\Extensions\\IdentityServicesExtensions.cs",
+              "RelativeToolTip": "src\\ImgGen.Application\\Extensions\\IdentityServicesExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-27T03:19:40.761Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DocumentRegistry.cs",
+              "DocumentMoniker": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\ImgGen.Application\\Infrastructure\\DocumentRegistry.cs",
+              "RelativeDocumentMoniker": "src\\ImgGen.Application\\Infrastructure\\DocumentRegistry.cs",
+              "ToolTip": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\ImgGen.Application\\Infrastructure\\DocumentRegistry.cs",
+              "RelativeToolTip": "src\\ImgGen.Application\\Infrastructure\\DocumentRegistry.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAuwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-27T03:17:43.832Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MartenIdentityUserLoginExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\Domain\\Identity\\Models\\MartenIdentityUserLoginExtensions.cs",
+              "RelativeDocumentMoniker": "src\\Domain\\Identity\\Models\\MartenIdentityUserLoginExtensions.cs",
+              "ToolTip": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\Domain\\Identity\\Models\\MartenIdentityUserLoginExtensions.cs",
+              "RelativeToolTip": "src\\Domain\\Identity\\Models\\MartenIdentityUserLoginExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-27T02:32:11.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\ImgGen.Mud\\Program.cs",
+              "RelativeDocumentMoniker": "src\\ImgGen.Mud\\Program.cs",
+              "ToolTip": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\ImgGen.Mud\\Program.cs",
+              "RelativeToolTip": "src\\ImgGen.Mud\\Program.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAjwDcAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T01:00:45.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MartenIdentityClaimExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\Domain\\Identity\\Models\\MartenIdentityClaimExtensions.cs",
+              "RelativeDocumentMoniker": "src\\Domain\\Identity\\Models\\MartenIdentityClaimExtensions.cs",
+              "ToolTip": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\Domain\\Identity\\Models\\MartenIdentityClaimExtensions.cs",
+              "RelativeToolTip": "src\\Domain\\Identity\\Models\\MartenIdentityClaimExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-27T02:32:05.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Claim.cs",
+              "DocumentMoniker": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\Domain\\Identity\\Models\\Claim.cs",
+              "RelativeDocumentMoniker": "src\\Domain\\Identity\\Models\\Claim.cs",
+              "ToolTip": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\Domain\\Identity\\Models\\Claim.cs",
+              "RelativeToolTip": "src\\Domain\\Identity\\Models\\Claim.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAiwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-27T02:31:59.103Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PersistenceServiceExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\ImgGen.Application\\Extensions\\PersistenceServiceExtensions.cs",
+              "RelativeDocumentMoniker": "src\\ImgGen.Application\\Extensions\\PersistenceServiceExtensions.cs",
+              "ToolTip": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\ImgGen.Application\\Extensions\\PersistenceServiceExtensions.cs",
+              "RelativeToolTip": "src\\ImgGen.Application\\Extensions\\PersistenceServiceExtensions.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwCUAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T01:01:33.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ImgGen.Test.csproj",
+              "DocumentMoniker": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\ImgGen.Test\\ImgGen.Test.csproj",
+              "RelativeDocumentMoniker": "ImgGen.Test\\ImgGen.Test.csproj",
+              "ToolTip": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\ImgGen.Test\\ImgGen.Test.csproj",
+              "RelativeToolTip": "ImgGen.Test\\ImgGen.Test.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAzwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-26T17:48:28.103Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ImgGenStoreOptions.cs",
+              "DocumentMoniker": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\ImgGen.Application\\Infrastructure\\ImgGenStoreOptions.cs",
+              "RelativeDocumentMoniker": "src\\ImgGen.Application\\Infrastructure\\ImgGenStoreOptions.cs",
+              "ToolTip": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\ImgGen.Application\\Infrastructure\\ImgGenStoreOptions.cs",
+              "RelativeToolTip": "src\\ImgGen.Application\\Infrastructure\\ImgGenStoreOptions.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACcAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T12:37:24.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ImageTypeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\ImgGen.Application\\Repository\\ImageTypeRepository.cs",
+              "RelativeDocumentMoniker": "src\\ImgGen.Application\\Repository\\ImageTypeRepository.cs",
+              "ToolTip": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\ImgGen.Application\\Repository\\ImageTypeRepository.cs",
+              "RelativeToolTip": "src\\ImgGen.Application\\Repository\\ImageTypeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBAAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T21:36:52.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ImageType.cs",
+              "DocumentMoniker": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\Domain\\Images\\ImageType.cs",
+              "RelativeDocumentMoniker": "src\\Domain\\Images\\ImageType.cs",
+              "ToolTip": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\Domain\\Images\\ImageType.cs",
+              "RelativeToolTip": "src\\Domain\\Images\\ImageType.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAvwBIAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T15:12:08.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ImageAsset.cs",
+              "DocumentMoniker": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\Domain\\Images\\ImageAsset.cs",
+              "RelativeDocumentMoniker": "src\\Domain\\Images\\ImageAsset.cs",
+              "ToolTip": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\Domain\\Images\\ImageAsset.cs",
+              "RelativeToolTip": "src\\Domain\\Images\\ImageAsset.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBMwBkAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T02:56:52.242Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ImagePart.cs",
+              "DocumentMoniker": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\Domain\\Images\\ImagePart.cs",
+              "RelativeDocumentMoniker": "src\\Domain\\Images\\ImagePart.cs",
+              "ToolTip": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\Domain\\Images\\ImagePart.cs",
+              "RelativeToolTip": "src\\Domain\\Images\\ImagePart.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T02:58:43.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ImageCategory.cs",
+              "DocumentMoniker": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\Domain\\Images\\ImageCategory.cs",
+              "RelativeDocumentMoniker": "src\\Domain\\Images\\ImageCategory.cs",
+              "ToolTip": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\Domain\\Images\\ImageCategory.cs",
+              "RelativeToolTip": "src\\Domain\\Images\\ImageCategory.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA5wBwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T15:12:33.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ApplicationJsonSerializer.cs",
+              "DocumentMoniker": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\ImgGen.Application\\Infrastructure\\ApplicationJsonSerializer.cs",
+              "RelativeDocumentMoniker": "src\\ImgGen.Application\\Infrastructure\\ApplicationJsonSerializer.cs",
+              "ToolTip": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\ImgGen.Application\\Infrastructure\\ApplicationJsonSerializer.cs",
+              "RelativeToolTip": "src\\ImgGen.Application\\Infrastructure\\ApplicationJsonSerializer.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T14:57:49.463Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "JsonExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\Domain\\Common\\JsonExtensions.cs",
+              "RelativeDocumentMoniker": "src\\Domain\\Common\\JsonExtensions.cs",
+              "ToolTip": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\Domain\\Common\\JsonExtensions.cs",
+              "RelativeToolTip": "src\\Domain\\Common\\JsonExtensions.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAqwBYAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T14:58:58.832Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ImgGen.Application.csproj",
+              "DocumentMoniker": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\ImgGen.Application\\ImgGen.Application.csproj",
+              "RelativeDocumentMoniker": "src\\ImgGen.Application\\ImgGen.Application.csproj",
+              "ToolTip": "C:\\Users\\pbriand\\source\\repos\\ImgGen\\src\\ImgGen.Application\\ImgGen.Application.csproj",
+              "RelativeToolTip": "src\\ImgGen.Application\\ImgGen.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-13T03:01:01.683Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

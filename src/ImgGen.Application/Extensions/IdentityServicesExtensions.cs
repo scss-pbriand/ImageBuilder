@@ -1,0 +1,32 @@
+﻿// Copyright (c) SC Strategic Solutions. All rights reserved.
+
+using Domain.Common;
+using Domain.Identity;
+using Domain.Identity.Models;
+using ImgGen.Application.Identity;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace SCSM.Application.Infrastructure;
+
+public static class IdentityServicesExtensions
+{
+
+    public static IdentityBuilder AddIdentityServices(this IServiceCollection services)
+    {
+        return services
+            .AddIdentityCore<ApplicationUser>(
+                opt =>
+                {
+                    opt.SignIn.RequireConfirmedAccount = false;
+                    opt.User.RequireUniqueEmail = false;
+                }
+            )
+            .AddRoles<Role>()
+            .AddUserStore<MartenUserStore<ApplicationUser, Role>>()
+            .AddRoleStore<MartenRoleStore<Role>>()
+            .AddSignInManager<SignInManager<ApplicationUser>>()
+            .AddDefaultTokenProviders();
+    }
+
+}

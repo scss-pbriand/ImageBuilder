@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-ImgGen.Mud-0ec21935-1ac9-4eda-a62e-2d327cd4e348</UserSecretsId>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="CodeBeam.MudBlazor.Extensions" Version="8.2.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="9.*" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.*" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.*" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.*" />
+    <PackageReference Include="MudBlazor" Version="8.*" />
+    <PackageReference Include="Extensions.MudBlazor.StaticInput" Version="3.*" />
+    <PackageReference Include="MudBlazor.Extensions" Version="8.12.0" />
+    <PackageReference Include="MudBlazor.ThemeManager" Version="3.0.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\ImgGen.Application\ImgGen.Application.csproj" />
+  </ItemGroup>
+
+</Project>

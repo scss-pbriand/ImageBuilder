@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="ImgGen.Test/ImgGen.Test.csproj" Id="2bedab34-52f0-485c-b4a9-40a60bf088af" />
+  <Project Path="src/Domain/Domain.csproj" />
+  <Project Path="src/ImgGen.Application/ImgGen.Application.csproj" Id="bd80414d-59d3-49ce-ad07-0025589585c3" />
+  <Project Path="src/ImgGen.Mud/ImgGen.Mud.csproj" Id="f3cfa2c3-c7b9-4a7a-b91d-7a53afdf6c02" />
+</Solution>

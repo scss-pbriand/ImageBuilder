@@ -1,0 +1,1 @@
+// Placeholder for ImageType tests. Implement Marten-based tests here.

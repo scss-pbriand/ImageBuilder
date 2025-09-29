@@ -1,0 +1,1 @@
+// Placeholder for GeneratedImage tests. Implement Marten-based tests here.
