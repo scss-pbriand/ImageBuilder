@@ -1,0 +1,371 @@
+@page "/create-image-type"
+@page "/manage-image-types"
+@page "/manage-image-types/{ImageTypeId:guid?}"
+@using Domain.Images
+@using ImgGen.Application.Repository
+@using FluentValidation
+@using Blazored.FluentValidation
+
+@inject ImageTypeRepository ImageTypeRepo
+@inject NavigationManager Navigation
+@inject ISnackbar Snackbar
+
+<PageTitle>Manage Image Types</PageTitle>
+
+<MudContainer>
+    <MudText Typo="Typo.h4" GutterBottom="true">
+        @(IsEditing ? "Edit Image Type" : "Create Image Type")
+    </MudText>
+
+    <MudPaper Class="pa-4 ma-2">
+        <EditForm Model="CurrentImageType" OnValidSubmit="SaveImageType">
+            <FluentValidationValidator />
+            <ValidationSummary />
+
+            <MudGrid>
+                <MudItem xs="12" md="6">
+                    <MudTextField @bind-Value="CurrentImageType.Name"
+                                  Label="Name"
+                                  Required="true"
+                                  MaxLength="100"
+                                  HelperText="Enter the image type name (max 100 characters)"
+                                  For="@(() => CurrentImageType.Name)" />
+                </MudItem>
+                <MudItem xs="12">
+                    <MudTextField @bind-Value="CurrentImageType.Description"
+                                  Label="Description"
+                                  Lines="3"
+                                  MaxLength="500"
+                                  HelperText="Enter a description (max 500 characters, optional)"
+                                  For="@(() => CurrentImageType.Description)" />
+                </MudItem>
+                <MudItem xs="12">
+                    <MudStack Row="true" Spacing="2">
+                        <MudButton ButtonType="ButtonType.Submit"
+                                   Variant="Variant.Filled"
+                                   Color="Color.Primary"
+                                   StartIcon="@Icons.Material.Filled.Save"
+                                   Disabled="IsLoading">
+                            @(IsLoading ? "Saving..." : "Save Image Type")
+                        </MudButton>
+                        <MudButton Variant="Variant.Outlined"
+                                   Color="Color.Secondary"
+                                   StartIcon="@Icons.Material.Filled.Cancel"
+                                   OnClick="Cancel">
+                            Cancel
+                        </MudButton>
+                        @if (IsEditing)
+                        {
+                            <MudButton Variant="Variant.Filled"
+                                       Color="Color.Error"
+                                       StartIcon="@Icons.Material.Filled.Delete"
+                                       OnClick="DeleteImageType"
+                                       Disabled="IsLoading">
+                                Delete
+                            </MudButton>
+                        }
+                    </MudStack>
+                </MudItem>
+            </MudGrid>
+        </EditForm>
+    </MudPaper>
+
+    @if (IsEditing && CurrentImageType.Id != Guid.Empty)
+    {
+        <MudPaper Class="pa-4 ma-2 mt-4">
+            <MudText Typo="Typo.h5" GutterBottom="true">Categories</MudText>
+            
+            <MudGrid>
+                <MudItem xs="12" md="6">
+                    <MudTextField @bind-Value="NewCategoryName"
+                                  Label="New Category Name"
+                                  MaxLength="100"
+                                  HelperText="Enter category name to add"
+                                  OnKeyDown="OnCategoryKeyDown" />
+                </MudItem>
+                <MudItem xs="12" md="3">
+                    <MudNumericField @bind-Value="NewCategoryWeight"
+                                     Label="Probability Weight"
+                                     Min="0"
+                                     Max="1"
+                                     Step="0.1"
+                                     Format="F1"
+                                     HelperText="0.0 to 1.0" />
+                </MudItem>
+                <MudItem xs="12" md="3" Class="d-flex align-center">
+                    <MudButton Variant="Variant.Filled"
+                               Color="Color.Primary"
+                               StartIcon="@Icons.Material.Filled.Add"
+                               OnClick="AddCategory"
+                               Disabled="string.IsNullOrWhiteSpace(NewCategoryName) || IsLoading">
+                        Add Category
+                    </MudButton>
+                </MudItem>
+            </MudGrid>
+
+            @if (CurrentImageType.Categories?.Any() == true)
+            {
+                <MudTable Items="CurrentImageType.Categories.OrderBy(c => c.InsertionOrder)" Dense="true" Class="mt-4">
+                    <HeaderContent>
+                        <MudTh>Name</MudTh>
+                        <MudTh>Weight</MudTh>
+                        <MudTh Style="width: 200px;">Actions</MudTh>
+                    </HeaderContent>
+                    <RowTemplate>
+                        <MudTd DataLabel="Name">
+                            @if (EditingCategoryId == context.Id)
+                            {
+                                <MudTextField @bind-Value="EditingCategoryName" Immediate="true" />
+                            }
+                            else
+                            {
+                                @context.Name
+                            }
+                        </MudTd>
+                        <MudTd DataLabel="Weight">
+                            @if (EditingCategoryId == context.Id)
+                            {
+                                <MudNumericField @bind-Value="EditingCategoryWeight" Min="0" Max="1" Step="0.1" Format="F1" />
+                            }
+                            else
+                            {
+                                @context.ProbabilityWeight.ToString("F1")
+                            }
+                        </MudTd>
+                        <MudTd DataLabel="Actions">
+                            @if (EditingCategoryId == context.Id)
+                            {
+                                <MudStack Row="true" Spacing="1">
+                                    <MudIconButton Icon="@Icons.Material.Filled.Save"
+                                                   Color="Color.Success"
+                                                   Size="Size.Small"
+                                                   OnClick="() => SaveCategoryEdit(context)" />
+                                    <MudIconButton Icon="@Icons.Material.Filled.Cancel"
+                                                   Color="Color.Secondary"
+                                                   Size="Size.Small"
+                                                   OnClick="CancelCategoryEdit" />
+                                </MudStack>
+                            }
+                            else
+                            {
+                                <MudStack Row="true" Spacing="1">
+                                    <MudIconButton Icon="@Icons.Material.Filled.Edit"
+                                                   Color="Color.Primary"
+                                                   Size="Size.Small"
+                                                   OnClick="() => StartCategoryEdit(context)" />
+                                    <MudIconButton Icon="@Icons.Material.Filled.Delete"
+                                                   Color="Color.Error"
+                                                   Size="Size.Small"
+                                                   OnClick="() => RemoveCategory(context.Name)" />
+                                </MudStack>
+                            }
+                        </MudTd>
+                    </RowTemplate>
+                </MudTable>
+            }
+            else
+            {
+                <MudText Typo="Typo.body2" Class="mt-4">No categories added yet.</MudText>
+            }
+        </MudPaper>
+    }
+</MudContainer>
+
+@code {
+    [Parameter] public Guid? ImageTypeId { get; set; }
+
+    private ImageType CurrentImageType = new();
+    private bool IsEditing => ImageTypeId.HasValue && ImageTypeId != Guid.Empty;
+    private bool IsLoading = false;
+
+    // Category management
+    private string NewCategoryName = string.Empty;
+    private double NewCategoryWeight = 1.0;
+    private Guid? EditingCategoryId = null;
+    private string EditingCategoryName = string.Empty;
+    private double EditingCategoryWeight = 1.0;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (IsEditing)
+        {
+            await LoadImageType();
+        }
+        else
+        {
+            CurrentImageType = new ImageType { Id = Guid.NewGuid() };
+        }
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (IsEditing)
+        {
+            await LoadImageType();
+        }
+    }
+
+    private async Task LoadImageType()
+    {
+        if (ImageTypeId.HasValue)
+        {
+            var imageType = await ImageTypeRepo.GetImageTypeByIdAsync(ImageTypeId.Value);
+            if (imageType != null)
+            {
+                CurrentImageType = imageType;
+            }
+            else
+            {
+                Snackbar.Add("Image type not found", MudBlazor.Severity.Error);
+                Navigation.NavigateTo("/");
+            }
+        }
+    }
+
+    private async Task SaveImageType()
+    {
+        try
+        {
+            IsLoading = true;
+            await ImageTypeRepo.UpsertImageTypeAsync(CurrentImageType);
+            Snackbar.Add($"Image type {(IsEditing ? "updated" : "created")} successfully", MudBlazor.Severity.Success);
+            
+            if (!IsEditing)
+            {
+                // Navigate to edit mode after creation
+                Navigation.NavigateTo($"/manage-image-types/{CurrentImageType.Id}");
+            }
+        }
+        catch (ValidationException ex)
+        {
+            Snackbar.Add($"Validation error: {ex.Message}", MudBlazor.Severity.Error);
+        }
+        catch (Exception ex)
+        {
+            Snackbar.Add($"Error saving image type: {ex.Message}", MudBlazor.Severity.Error);
+        }
+        finally
+        {
+            IsLoading = false;
+        }
+    }
+
+    private async Task DeleteImageType()
+    {
+        if (IsEditing)
+        {
+            try
+            {
+                IsLoading = true;
+                await ImageTypeRepo.DeleteImageTypeAsync(CurrentImageType.Id);
+                Snackbar.Add("Image type deleted successfully", MudBlazor.Severity.Success);
+                Navigation.NavigateTo("/");
+            }
+            catch (Exception ex)
+            {
+                Snackbar.Add($"Error deleting image type: {ex.Message}", MudBlazor.Severity.Error);
+                IsLoading = false;
+            }
+        }
+    }
+
+    private void Cancel()
+    {
+        Navigation.NavigateTo("/");
+    }
+
+    private async Task AddCategory()
+    {
+        if (string.IsNullOrWhiteSpace(NewCategoryName))
+            return;
+
+        try
+        {
+            IsLoading = true;
+            await ImageTypeRepo.AddImageCategory(CurrentImageType.Id, NewCategoryName.Trim(), NewCategoryWeight);
+            await LoadImageType(); // Refresh data
+            NewCategoryName = string.Empty;
+            NewCategoryWeight = 1.0;
+            Snackbar.Add("Category added successfully", MudBlazor.Severity.Success);
+        }
+        catch (Exception ex)
+        {
+            Snackbar.Add($"Error adding category: {ex.Message}", MudBlazor.Severity.Error);
+        }
+        finally
+        {
+            IsLoading = false;
+        }
+    }
+
+    private async Task RemoveCategory(string categoryName)
+    {
+        try
+        {
+            IsLoading = true;
+            await ImageTypeRepo.RemoveImageCategory(CurrentImageType.Id, categoryName);
+            await LoadImageType(); // Refresh data
+            Snackbar.Add("Category removed successfully", MudBlazor.Severity.Success);
+        }
+        catch (Exception ex)
+        {
+            Snackbar.Add($"Error removing category: {ex.Message}", MudBlazor.Severity.Error);
+        }
+        finally
+        {
+            IsLoading = false;
+        }
+    }
+
+    private void StartCategoryEdit(ImageCategory category)
+    {
+        EditingCategoryId = category.Id;
+        EditingCategoryName = category.Name;
+        EditingCategoryWeight = category.ProbabilityWeight;
+    }
+
+    private async Task SaveCategoryEdit(ImageCategory category)
+    {
+        try
+        {
+            IsLoading = true;
+            
+            // Update the category properties
+            category.Name = EditingCategoryName;
+            category.ProbabilityWeight = EditingCategoryWeight;
+            
+            // Save the entire image type (which includes validation)
+            await ImageTypeRepo.UpsertImageTypeAsync(CurrentImageType);
+            
+            CancelCategoryEdit();
+            Snackbar.Add("Category updated successfully", MudBlazor.Severity.Success);
+        }
+        catch (ValidationException ex)
+        {
+            Snackbar.Add($"Validation error: {ex.Message}", MudBlazor.Severity.Error);
+        }
+        catch (Exception ex)
+        {
+            Snackbar.Add($"Error updating category: {ex.Message}", MudBlazor.Severity.Error);
+        }
+        finally
+        {
+            IsLoading = false;
+        }
+    }
+
+    private void CancelCategoryEdit()
+    {
+        EditingCategoryId = null;
+        EditingCategoryName = string.Empty;
+        EditingCategoryWeight = 1.0;
+    }
+
+    private async Task OnCategoryKeyDown(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter" && !string.IsNullOrWhiteSpace(NewCategoryName))
+        {
+            await AddCategory();
+        }
+    }
+}

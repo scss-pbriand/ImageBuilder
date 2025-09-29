@@ -17,7 +17,7 @@
         <MudPaper Class="pa-16 ma-2" Outlined="true">
             <MudText Typo="Typo.h6">@imageType.Name</MudText>
             <MudText Typo="Typo.body2">@imageType.Description</MudText>
-            <MudButton Variant="Variant.Outlined" Color="Color.Primary" OnClick="() => NavigateToCreate()">
+            <MudButton Variant="Variant.Outlined" Color="Color.Primary" OnClick="() => NavigateToEdit(imageType.Id)">
                 View Details
 			</MudButton>
         </MudPaper>
@@ -43,5 +43,10 @@ else
     private void NavigateToCreate()
     {
         Navigation.NavigateTo("/create-image-type");
+    }
+
+    private void NavigateToEdit(Guid imageTypeId)
+    {
+        Navigation.NavigateTo($"/manage-image-types/{imageTypeId}");
     }
 }
