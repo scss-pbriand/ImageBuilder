@@ -1,0 +1,181 @@
+@using Domain.Images
+
+<MudPaper Class="pa-4 mt-2">
+    <MudStack Spacing="2">
+        <MudText Typo="Typo.subtitle2">Assets</MudText>
+
+        <MudGrid GutterSize="3">
+            @foreach (var asset in _pagedAssets)
+            {
+                <MudItem xs="12" sm="6" md="3">
+                    <MudCard Class="h-100 d-flex flex-column">
+                        <MudCardMedia Image="@GetAssetThumbnailUrl(asset)"
+                                      Height="140px"
+                                      Class="bg-grey-lighten-3" />
+                        <MudCardContent Class="flex-grow-1">
+                            <MudText Typo="Typo.subtitle2">@asset.Name</MudText>
+                        </MudCardContent>
+                        <MudCardActions Class="justify-end">
+                            <MudIconButton Icon="@Icons.Material.Filled.Edit"
+                                           Color="Color.Primary"
+                                           Size="Size.Small"
+                                           OnClick="() => EditAsset(asset)" />
+                            <MudIconButton Icon="@Icons.Material.Filled.Delete"
+                                           Color="Color.Error"
+                                           Size="Size.Small"
+                                           OnClick="() => DeleteAsset(asset)" />
+                        </MudCardActions>
+                    </MudCard>
+                </MudItem>
+            }
+
+            <MudItem xs="12" sm="6" md="3">
+                <MudCard Class="h-100 d-flex flex-column border-dashed border-1 border-primary text-center"
+                         Style="border-style: dashed;"
+                         OnClick="AddNewAsset">
+                    <MudCardContent Class="d-flex flex-column align-center justify-center flex-grow-1">
+                        <MudIcon Icon="@Icons.Material.Filled.AddPhotoAlternate"
+                                 Size="Size.Large"
+                                 Color="Color.Primary" />
+                        <MudText Typo="Typo.subtitle2" Class="mt-2">Add New Asset</MudText>
+                    </MudCardContent>
+                </MudCard>
+            </MudItem>
+        </MudGrid>
+
+        <MudStack Row="true" JustifyContent="Center" Class="pt-2">
+            <MudPagination Page="_currentPage"
+                            HideNext="false"
+                            HidePrev="false"
+                            Disabled="@(_totalPages <= 1)"
+                            OnPageChanged="OnPageChanged"
+                            Count="@_totalPages" />
+        </MudStack>
+    </MudStack>
+</MudPaper>
+
+@code {
+    [Parameter]
+    public ImageCategory? Category { get; set; }
+
+    [Parameter]
+    public EventCallback<ImageAsset> OnEditAsset { get; set; }
+
+    [Parameter]
+    public EventCallback<ImageAsset> OnDeleteAsset { get; set; }
+
+    [Parameter]
+    public EventCallback<ImageCategory> OnAddAsset { get; set; }
+
+    private const int PageSize = 12;
+    private int _currentPage = 1;
+    private int _totalPages = 1;
+    private IReadOnlyList<ImageAsset> _pagedAssets = Array.Empty<ImageAsset>();
+
+    protected override void OnParametersSet()
+    {
+        UpdatePagedAssets();
+    }
+
+    private void UpdatePagedAssets()
+    {
+        var assets = Category?.ImageAssets ?? new List<ImageAsset>();
+        _totalPages = Math.Max(1, (int)Math.Ceiling(assets.Count / (double)PageSize));
+
+        if (_currentPage > _totalPages)
+        {
+            _currentPage = _totalPages;
+        }
+
+        if (_currentPage < 1)
+        {
+            _currentPage = 1;
+        }
+
+        _pagedAssets = assets
+            .Skip((_currentPage - 1) * PageSize)
+            .Take(PageSize)
+            .ToList();
+    }
+
+    private Task OnPageChanged(int page)
+    {
+        if (page < 1)
+        {
+            _currentPage = 1;
+        }
+        else if (page > _totalPages)
+        {
+            _currentPage = _totalPages;
+        }
+        else
+        {
+            _currentPage = page;
+        }
+
+        UpdatePagedAssets();
+        StateHasChanged();
+        return Task.CompletedTask;
+    }
+
+    private async Task EditAsset(ImageAsset asset)
+    {
+        if (asset is null)
+        {
+            return;
+        }
+
+        if (OnEditAsset.HasDelegate)
+        {
+            await OnEditAsset.InvokeAsync(asset);
+        }
+    }
+
+    private async Task DeleteAsset(ImageAsset asset)
+    {
+        if (asset is null)
+        {
+            return;
+        }
+
+        if (OnDeleteAsset.HasDelegate)
+        {
+            await OnDeleteAsset.InvokeAsync(asset);
+        }
+    }
+
+    private async Task AddNewAsset()
+    {
+        if (Category is null)
+        {
+            return;
+        }
+
+        if (OnAddAsset.HasDelegate)
+        {
+            await OnAddAsset.InvokeAsync(Category);
+        }
+    }
+
+    private string GetAssetThumbnailUrl(ImageAsset asset)
+    {
+        if (asset is null)
+        {
+            return string.Empty;
+        }
+
+        var filePathProperty = asset.GetType().GetProperty("FilePath");
+        if (filePathProperty is null)
+        {
+            return string.Empty;
+        }
+
+        var value = filePathProperty.GetValue(asset) as string;
+        if (string.IsNullOrWhiteSpace(value))
+        {
+            return string.Empty;
+        }
+
+        return value;
+    }
+}
