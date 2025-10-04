@@ -1,0 +1,176 @@
+@page "/imagetype/{Id:guid}"
+@using Domain.Images
+@inject NavigationManager Navigation
+
+<PageTitle>Image Type Editor</PageTitle>
+
+<MudContainer Class="py-6">
+    <MudStack Spacing="4">
+        <MudStack Row="true" AlignItems="Center" JustifyContent="SpaceBetween">
+            <MudText Typo="Typo.h4">@(_imageType?.Name ?? "Image Type")</MudText>
+            <MudButton Variant="Variant.Outlined"
+                       Color="Color.Secondary"
+                       StartIcon="@Icons.Material.Filled.ArrowBack"
+                       OnClick="NavigateBack">
+                Back
+            </MudButton>
+        </MudStack>
+
+        <MudPaper Class="pa-4">
+            <MudStack Spacing="2">
+                <MudText Typo="Typo.subtitle1">Categories</MudText>
+                <MudTable Items="_categories"
+                          Dense="true"
+                          Hover="true"
+                          Elevation="0"
+                          Breakpoint="Breakpoint.Sm">
+                    <HeaderContent>
+                        <MudTh>Name</MudTh>
+                        <MudTh>Description</MudTh>
+                        <MudTh>Weight</MudTh>
+                        <MudTh Style="width: 200px;">Actions</MudTh>
+                    </HeaderContent>
+                    <RowTemplate>
+                        <MudTd DataLabel="Name">@context.Name</MudTd>
+                        <MudTd DataLabel="Description">@context.Description</MudTd>
+                        <MudTd DataLabel="Weight">@context.ProbabilityWeight.ToString("F2")</MudTd>
+                        <MudTd DataLabel="Actions">
+                            <MudStack Row="true" Spacing="1">
+                                <MudIconButton Icon="@Icons.Material.Filled.Edit"
+                                               Color="Color.Primary"
+                                               Size="Size.Small"
+                                               OnClick="() => EditCategory(context)" />
+                                <MudIconButton Icon="@Icons.Material.Filled.Delete"
+                                               Color="Color.Error"
+                                               Size="Size.Small"
+                                               OnClick="() => DeleteCategory(context)" />
+                            </MudStack>
+                        </MudTd>
+                    </RowTemplate>
+                    <DetailRowTemplate>
+                        <MudTd ColSpan="4">
+                            <CategoryAssetsGrid Category="context"
+                                                OnEditAsset="EditAsset"
+                                                OnDeleteAsset="DeleteAsset"
+                                                OnAddAsset="AddAsset" />
+                        </MudTd>
+                    </DetailRowTemplate>
+                    <NoRecordsContent>
+                        <MudTd ColSpan="4">
+                            <MudAlert Severity="Severity.Info" Elevation="0">
+                                No categories available. Use the create functionality to add one.
+                            </MudAlert>
+                        </MudTd>
+                    </NoRecordsContent>
+                </MudTable>
+            </MudStack>
+        </MudPaper>
+    </MudStack>
+</MudContainer>
+
+@code {
+    [Parameter]
+    public Guid Id { get; set; }
+
+    private ImageType? _imageType;
+    private readonly List<ImageCategory> _categories = new();
+
+    protected override Task OnParametersSetAsync()
+    {
+        LoadImageType();
+        return Task.CompletedTask;
+    }
+
+    private void LoadImageType()
+    {
+        _imageType = new ImageType
+        {
+            Id = Id,
+            Name = "Sample Image Type",
+            Description = "Sample description",
+            Categories = new List<ImageCategory>
+            {
+                new ImageCategory
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Backgrounds",
+                    Description = "Background elements",
+                    ProbabilityWeight = 0.5,
+                    ImageAssets = new List<ImageAsset>
+                    {
+                        new ImageAsset
+                        {
+                            Id = Guid.NewGuid(),
+                            ImageDataId = Guid.NewGuid(),
+                            Name = "Sunset",
+                        },
+                        new ImageAsset
+                        {
+                            Id = Guid.NewGuid(),
+                            ImageDataId = Guid.NewGuid(),
+                            Name = "Mountains",
+                        },
+                        new ImageAsset
+                        {
+                            Id = Guid.NewGuid(),
+                            ImageDataId = Guid.NewGuid(),
+                            Name = "Forest",
+                        }
+                    }
+                },
+                new ImageCategory
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Characters",
+                    Description = "Character overlays",
+                    ProbabilityWeight = 0.3,
+                    ImageAssets = new List<ImageAsset>()
+                },
+                new ImageCategory
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Accessories",
+                    Description = "Accessory additions",
+                    ProbabilityWeight = 0.2,
+                    ImageAssets = new List<ImageAsset>()
+                }
+            }
+        };
+
+        _categories.Clear();
+        if (_imageType.Categories is not null)
+        {
+            _categories.AddRange(_imageType.Categories);
+        }
+    }
+
+    private void NavigateBack()
+    {
+        Navigation.NavigateTo("/manage-image-types");
+    }
+
+    private void EditCategory(ImageCategory category)
+    {
+        // TODO: Implement category editing logic.
+    }
+
+    private void DeleteCategory(ImageCategory category)
+    {
+        // TODO: Implement category deletion logic.
+    }
+
+    private void EditAsset(ImageAsset asset)
+    {
+        // TODO: Implement asset editing logic.
+    }
+
+    private void DeleteAsset(ImageAsset asset)
+    {
+        // TODO: Implement asset deletion logic.
+    }
+
+    private void AddAsset(ImageCategory category)
+    {
+        // TODO: Implement new asset creation logic.
+    }
+}
