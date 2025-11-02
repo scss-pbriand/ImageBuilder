@@ -15,6 +15,7 @@ public class ImageDbContext : DbContext
 
     public DbSet<ImageData> ImageData { get; set; } = null!;
     public DbSet<ImageMetaData> ImageMetaData { get; set; } = null!;
+    public DbSet<DbMigrationInfo> DbMigrationInfos { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -22,6 +23,20 @@ public class ImageDbContext : DbContext
 
         // Configure schema
         modelBuilder.HasDefaultSchema("images");
+
+        // Configure DbMigrationInfo entity
+        modelBuilder.Entity<DbMigrationInfo>(entity =>
+        {
+            entity.ToTable("db_migration_info");
+            entity.HasKey(e => e.MigrationName);
+            entity.Property(e => e.MigrationName)
+                .HasColumnName("migration_name")
+                .HasMaxLength(100)
+                .IsRequired();
+            entity.Property(e => e.AppliedAtUtc)
+                .HasColumnName("applied_at_utc")
+                .IsRequired();
+        });
 
         // Configure ImageData entity
         modelBuilder.Entity<ImageData>(entity =>

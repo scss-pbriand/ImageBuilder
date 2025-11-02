@@ -6,7 +6,7 @@
 
 <MudContainer Class="py-6">
     <MudStack Spacing="4">
-        <MudStack Row="true" AlignItems="Center" JustifyContent="SpaceBetween">
+        <MudStack Row="true" AlignItems="AlignItems.Center" JustifyContent="SpaceBetween">
             <MudText Typo="Typo.h4">@(_imageType?.Name ?? "Image Type")</MudText>
             <MudButton Variant="Variant.Outlined"
                        Color="Color.Secondary"
@@ -19,50 +19,36 @@
         <MudPaper Class="pa-4">
             <MudStack Spacing="2">
                 <MudText Typo="Typo.subtitle1">Categories</MudText>
-                <MudTable Items="_categories"
-                          Dense="true"
-                          Hover="true"
-                          Elevation="0"
-                          Breakpoint="Breakpoint.Sm">
-                    <HeaderContent>
-                        <MudTh>Name</MudTh>
-                        <MudTh>Description</MudTh>
-                        <MudTh>Weight</MudTh>
-                        <MudTh Style="width: 200px;">Actions</MudTh>
-                    </HeaderContent>
-                    <RowTemplate>
-                        <MudTd DataLabel="Name">@context.Name</MudTd>
-                        <MudTd DataLabel="Description">@context.Description</MudTd>
-                        <MudTd DataLabel="Weight">@context.ProbabilityWeight.ToString("F2")</MudTd>
-                        <MudTd DataLabel="Actions">
-                            <MudStack Row="true" Spacing="1">
-                                <MudIconButton Icon="@Icons.Material.Filled.Edit"
-                                               Color="Color.Primary"
-                                               Size="Size.Small"
-                                               OnClick="() => EditCategory(context)" />
-                                <MudIconButton Icon="@Icons.Material.Filled.Delete"
-                                               Color="Color.Error"
-                                               Size="Size.Small"
-                                               OnClick="() => DeleteCategory(context)" />
-                            </MudStack>
-                        </MudTd>
-                    </RowTemplate>
-                    <DetailRowTemplate>
-                        <MudTd ColSpan="4">
-                            <CategoryAssetsGrid Category="context"
-                                                OnEditAsset="EditAsset"
-                                                OnDeleteAsset="DeleteAsset"
-                                                OnAddAsset="AddAsset" />
-                        </MudTd>
-                    </DetailRowTemplate>
-                    <NoRecordsContent>
-                        <MudTd ColSpan="4">
-                            <MudAlert Severity="Severity.Info" Elevation="0">
-                                No categories available. Use the create functionality to add one.
-                            </MudAlert>
-                        </MudTd>
-                    </NoRecordsContent>
-                </MudTable>
+
+                <MudDataGrid @ref="_dataGrid" Items="@_categories" ReadOnly="false" EditMode="@DataGridEditMode.Cell" ExpandSingleRow="true">
+                    <Columns>
+                        <HierarchyColumn T="ImageCategory" />
+                        <PropertyColumn Property="x => x.Name" Title="Name" />
+                        <PropertyColumn Property="x => x.Description" Title="Description" />
+                        <PropertyColumn Property="x => x.ProbabilityWeight" Title="Probability" />
+                        <PropertyColumn Property="x => x.InsertionOrder" Title="Order" />
+                    </Columns>
+                    <ChildRowContent>
+                        <MudCard>
+                            <MudCardHeader>
+                                <CardHeaderContent>
+                                    <MudText Typo="Typo.h6">@context.Item.Name</MudText>
+                                </CardHeaderContent>
+                            </MudCardHeader>
+                            <MudCardContent>
+                                <CategoryAssetsGrid Category="@context.Item"
+                                                    OnEditAsset="EditAsset"
+                                                    OnDeleteAsset="DeleteAsset"
+                                                    OnAddAsset="AddAsset" />
+                            </MudCardContent>
+                        </MudCard>
+                    </ChildRowContent>
+                    <PagerContent>
+                        <MudDataGridPager T="ImageCategory" />
+                    </PagerContent>
+                </MudDataGrid>
+
+                
             </MudStack>
         </MudPaper>
     </MudStack>
@@ -72,8 +58,9 @@
     [Parameter]
     public Guid Id { get; set; }
 
+    private MudDataGrid<ImageCategory> _dataGrid = null!;
     private ImageType? _imageType;
-    private readonly List<ImageCategory> _categories = new();
+    private IEnumerable<ImageCategory> _categories = new List<ImageCategory>();
 
     protected override Task OnParametersSetAsync()
     {
@@ -137,10 +124,10 @@
             }
         };
 
-        _categories.Clear();
+        _categories = [];
         if (_imageType.Categories is not null)
         {
-            _categories.AddRange(_imageType.Categories);
+            _categories = _imageType.Categories;
         }
     }
 

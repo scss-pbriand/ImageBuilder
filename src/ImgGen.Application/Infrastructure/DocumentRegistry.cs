@@ -2,11 +2,6 @@
 using Domain.Identity.Models;
 using Domain.Images;
 using Marten;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ImgGen.Application.Infrastructure;
 
@@ -16,6 +11,7 @@ public class DocumentRegistry : MartenRegistry
     {
         For<ImageType>().Identity(x => x.Id);
         For<GeneratedImage>().Identity(x => x.Id).ForeignKey<ImageType>(x => x.ImageTypeId);
+        For<DbMigrationInfo>().Identity(x => x.Id).Duplicate(x => x.AppliedAtUtc);
 
         RegisterIdentity();
     }
@@ -53,10 +49,10 @@ public class DocumentRegistry : MartenRegistry
                 }
             )
             .Metadata(m =>
-            {
-                m.IsSoftDeleted.MapTo(x => x.IsDeleted);
-                m.SoftDeletedAt.MapTo(x => x.DeletedAt);
-            }
+                {
+                    m.IsSoftDeleted.MapTo(x => x.IsDeleted);
+                    m.SoftDeletedAt.MapTo(x => x.DeletedAt);
+                }
             );
 
         For<Role>()
@@ -65,6 +61,5 @@ public class DocumentRegistry : MartenRegistry
             .UseOptimisticConcurrency(true)
             .UseNumericRevisions(true)
             .Index(x => x.NormalizedName, x => x.IsUnique = true);
-
     }
 }
